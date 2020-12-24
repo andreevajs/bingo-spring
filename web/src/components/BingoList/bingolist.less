@@ -1,0 +1,42 @@
+@import "../../styles.less";
+
+.bingo-list__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bingo-list__item {
+    flex-grow: 1;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    color: @color-main-dark;
+    margin: 8px;
+    border: 2px solid @color-main-light;
+    cursor: pointer;
+}
+
+.bingo-list__item:hover {
+    background: @color-main-light;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.bingo-list__update-button {
+    flex-grow: 1;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    margin: 8px;
+    border: 2px solid @color-main-dark;
+    background-color: @color-main-dark;
+    cursor: pointer;
+}
+
+.bingo-list__update-button:hover {
+    background: @color-main-light;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}

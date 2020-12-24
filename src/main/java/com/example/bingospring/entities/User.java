@@ -25,6 +25,9 @@ public class User implements UserDetails {
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
+    @OneToMany(mappedBy = "creator")
+    private Set<Bingo> bingo;
+
     public User() {
     }
 
@@ -78,7 +81,7 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword() {
-        return password;
+        return getPasswordHash();
     }
 
     public void setPassword(String password) {
@@ -107,5 +110,13 @@ public class User implements UserDetails {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Set<Bingo> getBingo() {
+        return bingo;
+    }
+
+    public void setBingo(Set<Bingo> bingo) {
+        this.bingo = bingo;
     }
 }

@@ -1,0 +1,50 @@
+@color-bg: #83aca6;
+@color-main-dark: #596d69;
+@color-main-light: #bcddd8;
+
+body {
+    background: @color-bg;
+    font-family: Tahoma;
+}
+
+.general-content() {
+    max-width: 1000px;
+    background: white;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 250px;
+    font-family: Tahoma;
+    padding: 50px 0;
+}
+
+.general-title() {
+    font-size: 36px;
+    color: @color-main-dark;
+    text-align: center;
+}
+
+.general-input() {
+    background-color: whitesmoke;
+    color: @color-bg;
+    font-size: 20px;
+    font-weight: normal;
+    border: 1px solid @color-bg;
+
+    &::placeholder {
+        color: @color-main-light;
+    }
+
+    &:hover {
+        background-color: white;
+    }
+}
+
+
+.general-submit() {
+    background-color: @color-bg;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    border: 1px solid @color-bg;
+    cursor: pointer;
+}

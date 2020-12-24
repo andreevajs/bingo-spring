@@ -1,0 +1,63 @@
+@import "../../styles.less";
+
+@cell-size: 150px;
+
+.bingo__name {
+    .general-title();
+    width: 100%;
+    margin-bottom: 10px;
+    background: transparent;
+    border: none;
+}
+
+.bingo__name:focus {
+    text-decoration: underline;
+}
+
+.bingo__table {
+    width: 100%;
+}
+
+.bingo__table-td {
+    position:relative;
+    border: 2px solid @color-main-dark;
+}
+
+.bingo__table-td:hover {
+    box-shadow: 0px 0px 4px @color-main-dark inset;
+}
+
+.bingo__table-td:after{
+    content:'';
+    display:block;
+    margin-top:100%;
+}
+
+.bingo__cell {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 100%;
+    width: 100%;
+
+    font-size: 18px;
+    text-align: center;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+    resize: none;
+
+    color: @color-main-dark;
+}
+
+.bingo__cell:disabled {
+    color: @color-main-dark;
+}
+
+.bingo__submit {
+    .general-submit();
+    width: 100%;
+    margin-top: 4px;
+}
